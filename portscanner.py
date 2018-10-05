@@ -4,7 +4,6 @@ import subprocess
 import sys
 from datetime import datetime, time
 
-# Clear the screen
 from socket import socket
 
 subprocess.call('clear', shell=True)
@@ -20,7 +19,6 @@ def item(args):
     pass
 
 
-# Print a banner with information on which host
 print('-' * 60)
 print("Please wait, scanning remote host", remoteServerIP)
 print('-' * 60)
@@ -58,11 +56,8 @@ except socket.error:
     print("Couldn't connect to server")
     sys.exit()
 
-# Checking the time again
 t2: datetime = datetime.now()
 
-# Calculates the difference of time, to see how long it took to run the script
 total = t2 - t1
 
-# Printing the information to screen
 print('Scanning Completed in:', total, '')
